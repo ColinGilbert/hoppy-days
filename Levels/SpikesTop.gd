@@ -17,5 +17,6 @@ func _ready():
 
 
 func _on_SpikesTop_body_entered(body):
-	if body.has_method("hurt"):
-		body.hurt()
+	#if body.has_method("hurt"):
+	#	body.hurt()
+	get_tree().call_group("Gamestate", "hurt")
